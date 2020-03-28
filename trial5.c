@@ -5,7 +5,7 @@
 
 struct list *create_list (void);
 //int display(struct list *record, int *index);
-int display(struct list *record);
+int display(struct list *record, int *index);
 
 
 struct list
@@ -63,47 +63,73 @@ struct list *create_list (void)  // CREATING A LINKED LIST
 
         if(!feof(fp))  // CREATING NEXT NODE
         {
-            //printf("%s\n", record->f_name);
+
             record->next = (struct list *)malloc(sizeof(struct list));  // ALLOCATING SPACE FOR THE NEXT NODE
             record = record->next;  // SHIFTING RECORD TO NEXT ELEMENT
         }
     }
-    //printf("RECORD %s\n", record->f_name);
+
     record->next=NULL;  // ENDING THE LINKED LIST
     fclose(fp);
-    printf("FILE CLOSED %p\n", start);
-
-    /*record=start;
-    for(i=0; i<70; ++i)
-    {
-        printf("%d %s %s %s \n \n", record->index, record->f_name, record->m_name, record->l_name);
-        record=record->next;
-
-    }*/
+    printf("FILE CLOSED \n");
     return(start);
 }
 
 
-int display(struct list *record)
+
+int display(struct list *record, int *index)
 {
+    int no_of_elements, i;
+    struct list *start;
+    start = record;
 
     if(record == NULL)  // CHECKING IF THE LIST IS EMPTY
     {
-        printf("\nLIST IS EMPTY.... \n"); // IF THE LIST IS EMPTY THEN PRINT AND RETURN
+        printf("\n LIST IS EMPTY.... \n"); // IF THE LIST IS EMPTY THEN PRINT AND RETURN
         return(0);
     }
-
+    no_of_elements=0;
     do
     {
+        no_of_elements++;
 
-        printf("%d %s %s %s \n ", record->index, record->f_name, record->m_name, record->l_name);
+        record=record->next;
 
-        record = record->next;
-    }while(record!= NULL);
+    }while(record!=NULL);
+    printf("records=%d\n", no_of_elements);
+
+
+    for(i=1; i<=no_of_elements; ++i)
+    {
+        record=start;
+        do
+        {
+            if(record->index == *(index+i))
+            {
+                printf("%d ", record->index);
+                printf("%s ", record->f_name);
+                printf("%s ", record->m_name);
+                printf("%s ", record->l_name);
+                printf("%d ", record->m1);
+                printf("%d ", record->m2);
+                printf("%d ", record->m3);
+                printf("%d ", record->m4);
+                printf("%d ", record->m5);
+                printf("\n");
+                break;
+            }
+            record = record->next;
+        }while(record!= NULL);
+    }
+
     printf("\nPRESS ANY KEY TO CONTINUE \n");
     getch();
     return(0);
 }
+
+
+
+
 
 
 void main(void)
@@ -113,14 +139,11 @@ void main(void)
 
 
     start = (struct list *)create_list();
-    //n_start = start;
-    printf("%p\n\n", start);
     for(i=1; i<=100; ++i)
     {
         l_index[i] = i;
     }
-    printf("%p\n\n", start);
-    display(start);
+    display(start, l_index);
 
 }
 
