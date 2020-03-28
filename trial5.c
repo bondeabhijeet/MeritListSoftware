@@ -88,23 +88,23 @@ int display(struct list *record, int *index)
         printf("\n LIST IS EMPTY.... \n"); // IF THE LIST IS EMPTY THEN PRINT AND RETURN
         return(0);
     }
-    no_of_elements=0;
+    no_of_elements=0;  // COUNTING NUMBER OF ELEMENTS
     do
     {
         no_of_elements++;
 
-        record=record->next;
+        record=record->next;  // INCREMENTING THE POINTER TO COUNT THE NUMBER OF ELEMENTS
 
     }while(record!=NULL);
-    printf("records=%d\n", no_of_elements);
+    printf("records=%d\n", no_of_elements);  // VERIFYING THE NUMBER OF RECORDS
 
 
-    for(i=1; i<=no_of_elements; ++i)
+    for(i=1; i<=no_of_elements; ++i)  // PRINTING THE RECORDS INDEX WISE
     {
         record=start;
         do
         {
-            if(record->index == *(index+i))
+            if(record->index == *(index+i))  // PRINTING THE RECORD AT I'TH INDEX
             {
                 printf("%d ", record->index);
                 printf("%s ", record->f_name);
@@ -122,7 +122,7 @@ int display(struct list *record, int *index)
         }while(record!= NULL);
     }
 
-    printf("\nPRESS ANY KEY TO CONTINUE \n");
+    printf("\nPRESS ANY KEY TO CONTINUE \n");  // SO THAT THE OUTPUT STAYS ON THE SCREEN
     getch();
     return(0);
 }
@@ -139,9 +139,9 @@ void main(void)
 
 
     start = (struct list *)create_list();
-    for(i=1; i<=100; ++i)
+    for(i=1; i<=70; ++i)
     {
-        l_index[i] = i;
+        l_index[i] = (70-i+1);
     }
     display(start, l_index);
 
