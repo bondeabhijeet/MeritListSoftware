@@ -89,7 +89,7 @@ int display(struct list *record)
 
     if(record == NULL)  // CHECKING IF THE LIST IS EMPTY
     {
-        printf("\n LIST IS EMPTY.... \n"); // IF THE LIST IS EMPTY THEN PRINT AND RETURN
+        printf("\nLIST IS EMPTY.... \n"); // IF THE LIST IS EMPTY THEN PRINT AND RETURN
         return(0);
     }
 
@@ -109,15 +109,14 @@ int display(struct list *record)
 void main(void)
 {
     struct list *start, *n_start;
-    int l_index[100], i;
+    int l_index[101], i;
 
 
     start = (struct list *)create_list();
     //n_start = start;
     printf("%p\n\n", start);
-    for(i=1; i<=99; ++i)
+    for(i=1; i<=100; ++i)
     {
-    printf("%p\n\n", start);
         l_index[i] = i;
     }
     printf("%p\n\n", start);
