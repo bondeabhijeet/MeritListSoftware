@@ -115,7 +115,6 @@ void main(void)
     start = (struct list *)create_list();
     //n_start = start;
     printf("%p\n\n", start);
-    printf("%p\n\n", start);
     for(i=1; i<=99; ++i)
     {
     printf("%p\n\n", start);
