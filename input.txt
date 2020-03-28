@@ -66,5 +66,5 @@
 66 Rakha Mayur Bacchan 3 69 98 78 52
 67 Sushma Prakash Laddha 18 64 7 35 00
 68 Hemmma Yeshwant Advani 54 98 41 2 58
-69 Alok Girish Chauhan 25 78 36 49 10
+69 Alok Girish Chauhan 100 78 36 49 10
 70 Sanjay Anmol Kumar 00 25 78 01 64
