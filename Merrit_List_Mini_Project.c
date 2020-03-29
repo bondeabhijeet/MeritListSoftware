@@ -355,7 +355,7 @@ int CreateOutputFile(struct list *record, int *index)
 
     }while(record!=NULL);
     fprintf(fp, "records=%d\n", no_of_elements);  // VERIFYING THE NUMBER OF RECORDS
-
+            // PRINTING THE FIELDS
     fprintf(fp, "%4s   %-20s %-20s %-20s %-8s %-8s %-8s %-8s %-8s %-5s %-10s \n", "S.NO", "FIRST NAME", "MIDDLE NAME", "LAST NAME", "MARKS 1", "MARKS 2", "MARKS 3", "MARKS 4", "MARKS 5", "TOTAL", "PERCENTAGE" );
     for(i=0; i<no_of_elements; ++i)  // PRINTING THE RECORDS INDEX WISE
     {
@@ -389,7 +389,7 @@ int CreateOutputFile(struct list *record, int *index)
     return(0);
 }
 
-int menu(void)
+int menu(void)   // MENU
 {
     int choice;
     do
@@ -429,7 +429,7 @@ void main(void)
     n_index=NULL;
 
 
-    start = (struct list *)create_list();
+    start = (struct list *)create_list();   // ALLOCATING THE SPACE
 
     do
     {
