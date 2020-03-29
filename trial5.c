@@ -4,9 +4,10 @@
 #include<conio.h>
 
 struct list *create_list (void);
-//int display(struct list *record, int *index);
 int display(struct list *record, int *index);
 int *sort_on_marks(struct list *start, int choice);
+int *sort_on_name(struct list *start, int choice);
+struct list *free_memory(struct list *record);
 
 
 struct list
@@ -101,7 +102,7 @@ int display(struct list *record, int *index)
     }while(record!=NULL);
     printf("records=%d\n", no_of_elements);  // VERIFYING THE NUMBER OF RECORDS
 
-
+    printf("%4s   %-20s %-20s %-20s %-8s %-8s %-8s %-8s %-8s %-5s %-10s \n", "S.NO", "FIRST NAME", "LAST NAME", "MIDDLE NAME", "MARKS 1", "MARKS 2", "MARKS 3", "MARKS 4", "MARKS 5", "TOTAL", "PERCENTAGE" );
     for(i=0; i<no_of_elements; ++i)  // PRINTING THE RECORDS INDEX WISE
     {
         record=start;
@@ -109,17 +110,17 @@ int display(struct list *record, int *index)
         {
             if(record->index == *(index+i))  // PRINTING THE RECORD AT I'TH INDEX
             {
-                printf("%3d   ", record->index);
+                printf("%4d   ", record->index);
                 printf("%-20s ", record->f_name);
                 printf("%-20s ", record->m_name);
                 printf("%-20s ", record->l_name);
-                printf("%-4d ", record->m1);
-                printf("%-4d ", record->m2);
-                printf("%-4d ", record->m3);
-                printf("%-4d ", record->m4);
-                printf("%-4d ", record->m5);
+                printf("%-8d ", record->m1);
+                printf("%-8d ", record->m2);
+                printf("%-8d ", record->m3);
+                printf("%-8d ", record->m4);
+                printf("%-8d ", record->m5);
                 printf("%-5d ", record->total_marks);
-                printf("%-5.3f ", record->percentage);
+                printf("%-10.3f ", record->percentage);
                 printf("\n");
                 break;
             }
@@ -219,6 +220,89 @@ int *sort_on_marks(struct list *start, int choice)
 
 
 
+
+int *sort_on_name(struct list *start, int choice)
+{
+    struct list *record;
+    int no_of_elements, i, j, temp1, *index, k;
+
+    record=start;
+
+    no_of_elements=0;  // COUNTING NUMBER OF ELEMENTS
+    do
+    {
+        no_of_elements++;
+
+        record=record->next;  // INCREMENTING THE POINTER TO COUNT THE NUMBER OF ELEMENTS
+
+    }while(record!=NULL);
+
+    char names[no_of_elements][20], temp[20];
+    index = (int *)malloc(sizeof(int)*(no_of_elements));
+
+    for(i=0; i<no_of_elements; ++i)
+    {
+        index[i] = (i+1);
+    }
+
+    record = start;
+
+    for(i=0; i<no_of_elements; ++i)
+    {
+        if(choice == 8)
+        {
+            strcpy(&names[i][0], record->f_name);
+        }
+        if(choice == 9)
+        {
+            strcpy(&names[i][0], record->l_name);
+        }
+
+        record = record->next;
+    }
+    // SORTING STARTS FROM HERE
+
+
+
+    for(i=0; i<(no_of_elements-1); i++)
+    {
+        for(j=0; j<(no_of_elements-i-1); j++)
+        {
+            k = strcmp(strupr(&names[j][0]), strupr(&names[j+1][0]));
+            if(k>0)
+            {
+                strcpy(temp, &names[j][0]);
+                strcpy(&names[j][0], &names[j+1][0]);
+                strcpy(&names[j+1][0], temp);
+
+                temp1=index[j];
+                index[j]=index[j+1];
+                index[j+1]=temp1;
+            }
+        }
+    }
+    return(index);
+}
+
+struct list *free_memory(struct list *record)
+{
+    struct list *P_record;
+    if(record == NULL)  // CHECKING IF THE LIST IS EMPTY
+    {
+        printf("\n LIST IS EMPTY.... \n"); // IF THE LIST IS EMPTY THEN PRINT AND RETURN
+        return(record);
+    }
+
+    do
+    {
+        P_record = record;
+        record = record->next;
+        printf("FREED NODE NO: %d \n", P_record->index);
+        free(P_record);
+    }while(record!= NULL);
+    return(NULL);
+}
+
 void main(void)
 {
     struct list *start;
@@ -229,9 +313,11 @@ void main(void)
 
     //printf("ENTER 1 TO SORT ")
     //scanf("%d", &choice);
-    choice=1;
-    n_index  = sort_on_marks(start, choice);
+    choice=9;
+    n_index  = sort_on_name(start, choice);
     display(start, n_index);
+    free_memory(start);
+
 }
 
 
