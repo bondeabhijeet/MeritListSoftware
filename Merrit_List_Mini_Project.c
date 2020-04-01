@@ -36,14 +36,15 @@ struct list *create_list (void)  // CREATING A LINKED LIST
     struct list *start, *record;
     char file_name[80];
     int i;
-    //printf("ENTER THE FILENAME: \n");
-    //scanf(" %[^\n]", file_name);
-    strcpy(file_name,"input.txt");
+    printf("  ENTER THE FILENAME: ");
+    scanf(" %[^\n]", file_name);
+    printf("\n");
+    //strcpy(file_name,"input.txt");  // FOR TESTING PURPOSE ONLY
 
     if((fp=fopen(file_name,"r"))==NULL)  // OPENING A FILE
     {
-        printf("ERROR OPENING FILE>>>>>>\n");
-        printf("PRESS ANY KEY TO CONTINUE\n");
+        printf("  ERROR OPENING FILE>>>>>>\n");
+        printf("  PRESS ANY KEY TO CONTINUE\n");
         getch();
         return(NULL);
     }
@@ -396,18 +397,18 @@ int menu(void)   // MENU
     {
         system("cls");
         printf("        MENU \n");
-        printf("1 TO SORT ON MARKS 1 \n");
-        printf("2 TO SORT ON MARKS 2 \n");
-        printf("3 TO SORT ON MARKS 3 \n");
-        printf("4 TO SORT ON MARKS 4 \n");
-        printf("5 TO SORT ON MARKS 5 \n");
-        printf("6 TO SORT ON TOTAL MARKS  \n");
-        printf("7 TO SORT ON INDEX \n");
-        printf("8 TO SORT ON FIRST NAME \n");
-        printf("9 TO SORT ON LAST NAME \n");
-        printf("10 TO CREATE A OUTPUT FILE \n");
-        printf("11 TO EXIT THE PROGRAM AND FREE MEMORY\n");
-        printf("ENTER YOUR CHOICE-----> ");
+        printf("  1 TO SORT ON MARKS 1 \n");
+        printf("  2 TO SORT ON MARKS 2 \n");
+        printf("  3 TO SORT ON MARKS 3 \n");
+        printf("  4 TO SORT ON MARKS 4 \n");
+        printf("  5 TO SORT ON MARKS 5 \n");
+        printf("  6 TO SORT ON TOTAL MARKS  \n");
+        printf("  7 TO SORT ON INDEX \n");
+        printf("  8 TO SORT ON FIRST NAME \n");
+        printf("  9 TO SORT ON LAST NAME \n");
+        printf("  10 TO CREATE A OUTPUT FILE \n");
+        printf("  11 TO EXIT THE PROGRAM AND FREE MEMORY\n\n");
+        printf("  ENTER YOUR CHOICE-----> ");
         scanf("%d", &choice);
         if(choice<1 || choice>11)
         {
