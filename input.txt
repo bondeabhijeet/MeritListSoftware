@@ -67,7 +67,12 @@
 67 Sushma Prakash Laddha 18 64 7 35 00
 68 Hemmma Yeshwant Advani 54 98 41 2 58
 69 Alok Girish Chauhan 100 78 36 49 10
-70 Sanjay    Anmol Kumar 00   25   78   01   64
+70 Sanjay Anmol Kumar 00 25 78 01 64
+71 Abir Kumar Singh 54 59 65 15 23
+72 Daniel Neils Paul 58 29 23 45 47
+73 Barbie Aditya Chouhaan 87 25 69 64 19
+74 Mrunali Suresh Kumar 2 42 82 96 9
+75 
 
 99 Elena David Gilbert 85 59 32 58 65
 100 Hemangi Kunal Sharma 344 65 82 45 98
