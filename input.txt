@@ -4,7 +4,7 @@
 4 Lewis Damon Joushwa 32 43 14 61 82
 5 Leon Albert Caverli 56 48 76 48 74
 6 Abdul John Zadhea 32 43 54 24 56
-7 
+7 Aadhya Klaus Mani 48 20 59 02 48
 8 Laurence Andy Lee 25 89 47 63 14
 9 David Natty Ping 48 69 75 93 52
 10 Joseph George Tau 7 9 6 85 47
@@ -19,7 +19,7 @@
 19 Dharmendra Akshat Chopde 48 25 19 77 64
 20 Riya Vishnu Londhe 47 59 67 25 06
 21 Yash Vedu Chaudhari 02 04 40 65 11
-22 Aniket Pitambar Chonde 30 21 24 27 64
+22 Aniket Animesh Chonde 30 21 24 27 64
 23 Kiran Ulhaas Gonde 14 57 64 68 10
 24 Suraj Govinda Bhole 54 85 64 31 25
 25 Vidit Anubhav Gupta 51 85 21 31 65
@@ -35,13 +35,13 @@
 35 Vineet Chinmay Rane 13 46 79 96 94
 36 Vineeta Vivek Dayma 21 78 96 52 41
 37 Himangi Vinod Lakka 14 87 32 95 84
-38 Rohit Harshit Bendale 84 95 15 62 61
+38 Rohit Harshit Meherotra 84 95 15 62 61
 39 Rohan Rahul Kolhe 15 48 59 26 19
-40 Deepak Varun Landge 19 37 46 28 64
-41 Deepika Shaan Toke 9 73 82 64 94
+40 Deepak Varun Bansal 19 37 46 28 64
+41 Deepika Shaan Hurne 9 73 82 64 94
 42 Radhika Jatin Kansal 94 96 97 98 59
 43 Popat Animesh Munde 02 04 60 68 61
-44 Mohan Anil Barathe 78 94 16 19 18
+44 Mohan Anil Srivastava 78 94 16 19 18
 45 Dhanraj Sunail Pande 78 64 89 13 44
 46 Anuraag Rajendra Dwivedi 94 95 96 22 33
 47 Kedar Amar Trevedi 33 44 85 25 45
@@ -58,7 +58,7 @@
 58 Poonam Pradeep Kadam 35 18 27 39 15
 59 Milind Samarth Rai 19 37 4 9 12
 60 Heemant Keshav Roy 24 6 8 74 25
-61 Shaila Anup Zade 9 85 64 78 25
+61 Shaila Anup Saraswat 9 85 64 78 25
 62 Preeti Ankur Deshpande 97 52 64 58 66
 63 Kabir Amol Deshmukh 48 97 26 49 34
 64 Shirley Avinash Kulkarni 97 15 85 74 37
@@ -72,7 +72,29 @@
 72 Daniel Neils Paul 58 29 23 45 47
 73 Barbie Aditya Chouhaan 87 25 69 64 19
 74 Mrunali Suresh Kumar 2 42 82 96 9
-75 
-
+75 Aahana Vishal Kumar 48 89 85 76 87
+76 Aalia Rushikesh Makur 84 29 16 79 31
+77 Aditi Sarpanch Subraynam 70 09 84 35 19
+78 Simranjeet singh Khalsa 79 64 19 37 17
+79 Komal Anil Biradhe 16 4 6 73 49
+80 Aditya Suresh Kadam 79 8 86 34 09
+81 Vinay Sushil Gonarkar 06 35 93 24 97
+82 Nameera Anas Khan 79 76 13 64 65
+83 Anusha Manish Makan 25 2 03 26 56
+84 Abhay Sanjay Rangnani 26 05 62 05 25
+85 Bonnie Klaus Llyod 79 98 78 69 49
+86 Praveen Pratik Das 93 15 62 48 64
+87 Ashwini Shobhraj Motewar 79 85 28 36 49
+88 Priyanka Tanishq Mahapatra 49 23 49 79 13
+89 Heena Priyanshu Shinde 79 18 14 02 50 
+90 Kriti Suraj Gupta 19 28 98 82 67
+91 Kirti Ashwin Goyal 49 64 11 34 16
+92 Nupur Kartik Aggrawal 94 64 13 34 18
+93 Prasanna Rishabh Jain 54 78 32 67 21
+94 Prasanjeet Abhishek Kansal 23 65 7 98 12
+95 Ranjan Subhash Banarjee 12 46 87 35 08
+96 Bubbly Shubham Bandopadhya 26 76 97 08 57
+97 Bablu Subashish Updhaya 14 64 79 37 69
+98 Radhika Somesh Aapte 14 54 87 64 32
 99 Elena David Gilbert 85 59 32 58 65
-100 Hemangi Kunal Sharma 344 65 82 45 98
+100 Hemangi Kunal Sharma 34 65 82 45 98
