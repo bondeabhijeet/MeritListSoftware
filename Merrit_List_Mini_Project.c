@@ -393,6 +393,7 @@ int CreateOutputFile(struct list *record, int *index)
 int menu(void)   // MENU
 {
     int choice;
+
     do
     {
         system("cls");
@@ -413,6 +414,8 @@ int menu(void)   // MENU
         if(choice<1 || choice>11)
         {
             printf("\n ENTER A VALID INPUT!!!!! \n");
+            printf("\n PRESS ANY KEY TO CONTINUE \n");
+            getch();
         }
     }while(choice<1 || choice>11);
 
@@ -435,6 +438,7 @@ void main(void)
     do
     {
         choice=menu();
+        printf("\n\n %d \n\n", choice);
         if(choice==1)
         {
             n_index = sort_on_marks(start, choice);
